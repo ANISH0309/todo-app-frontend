@@ -12,7 +12,6 @@ class App extends Component {
 	render() {
 		return (
 			<div>
-				{/* <h2>What up</h2> */}
 				<Routes>
 					<Route exact path="/register" element={<Register />} />
 					<Route exact path="/login" element={<Login />} />

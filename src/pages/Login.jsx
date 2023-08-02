@@ -4,9 +4,12 @@ import { Link, useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import { ToastContainer, toast } from "react-toastify";
 
+import Navbar from "../Components/Navbar";
+
 const Login = () => {
 	const [cookies] = useCookies([]);
 	const navigate = useNavigate();
+
 	useEffect(() => {
 		if (cookies.jwt) {
 			navigate("/");
@@ -45,7 +48,9 @@ const Login = () => {
 
 	return (
 		<div className="container mx-auto px-4">
-			<div className="h-screen flex items-center justify-center">
+			<Navbar />
+
+			<div className="mt-36 flex items-center justify-center">
 				<div className="flex flex-col p-5 border border-purple-300 rounded-md">
 					<div>
 						<h2 className="text-3xl mb-7 text-center">Login to your Account</h2>
