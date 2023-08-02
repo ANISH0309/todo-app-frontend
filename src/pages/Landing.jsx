@@ -5,6 +5,7 @@ import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 
 import TodoSection from "../Containers/TodoSection";
+import Navbar from "../Components/Navbar";
 
 const Landing = () => {
 	const navigate = useNavigate();
@@ -33,16 +34,11 @@ const Landing = () => {
 		verifyUser();
 	}, [cookies, navigate, removeCookie]);
 
-	const logOut = () => {
-		removeCookie("jwt");
-		navigate("/login");
-	};
-
 	return (
 		<>
 			<div className="private">
+				<Navbar />
 				<TodoSection />
-				{/* <button onClick={logOut}>Log out</button> */}
 			</div>
 			<ToastContainer />
 		</>

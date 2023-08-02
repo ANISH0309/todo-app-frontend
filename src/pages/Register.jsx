@@ -50,7 +50,7 @@ const Register = () => {
 
 	return (
 		<div className="container mx-auto px-4">
-			<div className="h-screen flex items-center justify-center">
+			<div className="flex items-center justify-center mt-36">
 				<div className="flex flex-col p-5 border border-purple-300 rounded-md">
 					<div>
 						<h2 className="text-3xl mb-7 text-center">Register Account</h2>
