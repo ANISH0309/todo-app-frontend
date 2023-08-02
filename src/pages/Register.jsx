@@ -4,6 +4,8 @@ import { ToastContainer, toast } from "react-toastify";
 import { useCookies } from "react-cookie";
 import { Link, useNavigate } from "react-router-dom";
 
+import Navbar from "../Components/Navbar";
+
 const Register = () => {
 	const [cookies] = useCookies(["cookie-name"]);
 	const navigate = useNavigate();
@@ -50,6 +52,7 @@ const Register = () => {
 
 	return (
 		<div className="container mx-auto px-4">
+			<Navbar />
 			<div className="flex items-center justify-center mt-36">
 				<div className="flex flex-col p-5 border border-purple-300 rounded-md">
 					<div>
